@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+}
+/* .image{
+    height: 750px;
+    width: 100%;
+    border: 1px solid black; 
+    background-image: url('images/calculator.png');
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position-x: center;
+} */
+.card{
+    align-content: center;
+}
+.shape{
+    width: 80px;
+    height: 80px;
+    border-radius: 60px;
+    margin-left: 2%;
+    margin-top: 2%;
+    font-size: 41px;
+    border-color: transparent;
+    text-align: center;
+}
+.shape:hover{
+    opacity: 60%;
+}
+.zero{
+    width: 174px;
+    height: 80px;
+    border-radius: 60px;
+    margin-left: 2%;
+    margin-top: 2%;
+    font-size: 41px;
+    border-color: transparent;
+}
+.zero:hover{
+    opacity: 60%;
+}
+.textbox{
+    height: 200px;
+    border-color: transparent;
+    font-size: 50px;
+    text-align: right;
+}
+.margin{
+    margin-top: 3%;
+}
+.blue{
+    background-color: cornflowerblue;
+}
+.light{
+    background-color: turquoise;
+}
+.left{
+    margin-left: 1%;
+}
+.bgcolor{
+    background-color: grey;
+}
