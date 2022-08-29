@@ -3,8 +3,6 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/icon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>My Calculator</title>
     <script>
         function print(value){
@@ -28,37 +26,81 @@
             function calc(){
                 document.getElementById('output').value = eval(document.getElementById('output').value)
             }
+            function changemode(){
+                let mybody = document.getElementById('card')
+                mybody.classList.toggle('darkcard')
+                let textbox = document.getElementById('output')
+                textbox.classList.toggle('darktextbox')
+                let orange = document.getElementById('blue')
+                orange.classList.toggle('orange')
+                let orange1 = document.getElementById('blue1')
+                orange1.classList.toggle('orange')
+                let orange2 = document.getElementById('blue2')
+                orange2.classList.toggle('orange')
+                let orange3 = document.getElementById('blue3')
+                orange3.classList.toggle('orange')
+                let orange4 = document.getElementById('blue4')
+                orange4.classList.toggle('orange')
+                let dark1 = document.getElementById('dark1')
+                dark1.classList.toggle('dark')
+                let dark2 = document.getElementById('dark2')
+                dark2.classList.toggle('dark')
+                let dark3 = document.getElementById('dark3')
+                dark3.classList.toggle('dark')
+                let common1 = document.getElementById('common1')
+                common1.classList.toggle('common')
+                let common2 = document.getElementById('common2')
+                common2.classList.toggle('common')
+                let common3 = document.getElementById('common3')
+                common3.classList.toggle('common')
+                let common4 = document.getElementById('common4')
+                common4.classList.toggle('common')
+                let common5 = document.getElementById('common5')
+                common5.classList.toggle('common')
+                let common6 = document.getElementById('common6')
+                common6.classList.toggle('common')
+                let common7 = document.getElementById('common7')
+                common7.classList.toggle('common')
+                let common8 = document.getElementById('common8')
+                common8.classList.toggle('common')
+                let common9 = document.getElementById('common9')
+                common9.classList.toggle('common')
+                let common10 = document.getElementById('common10')
+                common10.classList.toggle('common')
+                let common11 = document.getElementById('common11')
+                common11.classList.toggle('common')
+                let bulb = document.getElementById('light')
+                bulb.classList.toggle('sun')
+            }
     </script>
 </head>
 <body>
-    <div class="container margin">
-        <div class="row card">
-            <div class="col-4">
-                <div class="card cardtop">
-                    <input type="text" class="textbox" id="output">
-                    <div class="card-body left">
-                        <button class="shape light" onclick="clrscr()">AC</button>
-                        <button class="shape light" onclick="delitem()" >D</button>
-                        <button class="shape light" value='%' onclick="print('%')">%</button>
-                        <button class="shape blue" value='/' onclick="print('/')">/</button>
-                        <button class="shape" value='7' onclick="print(7)">7</button>
-                        <button class="shape" value='8' onclick="print(8)">8</button>
-                        <button class="shape" value='9' onclick="print(9)">9</button>
-                        <button class="shape blue" value='X' onclick="print('*')">x</button>
-                        <button class="shape" value='4' onclick="print(4)">4</button>
-                        <button class="shape" value='5' onclick="print(5)">5</button>
-                        <button class="shape" value='6' onclick="print(6)">6</button>
-                        <button class="shape blue" value='-' onclick="print('-')">-</button>
-                        <button class="shape" value='1' onclick="print(1)">1</button>
-                        <button class="shape" value='2' onclick="print(2)">2</button>
-                        <button class="shape" value='3' onclick="print(3)">3</button>
-                        <button class="shape blue" value='+' onclick="print('+')">+</button>
-                        <button class="zero" value='0' onclick="print(0)">0</button>
-                        <button class="shape" value='.' onclick="print('.')">.</button>
-                        <button class="shape blue" value='=' onclick="calc()">=</button>
-                    </div>
-                </div>
-            </div>
+    <div class="card cardtop" id="card">
+        <button onclick="changemode()" class="moon" id="light"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+            <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </button>
+        <input type="text" class="textbox" id="output">
+        <div class="card-body left">
+            <button class="shape light" onclick="clrscr()" id="dark1">AC</button>
+            <button class="shape light" onclick="delitem()" id="dark2">D</button>
+            <button class="shape light" value='%' onclick="print('%')" id="dark3">%</button>
+            <button class="shape blue" id='blue' value='/' onclick="print('/')">/</button>
+            <button class="shape" value='7' onclick="print(7)" id="common1">7</button>
+            <button class="shape" value='8' onclick="print(8)"id="common2">8</button>
+            <button class="shape" value='9' onclick="print(9)" id="common3">9</button>
+            <button class="shape blue" id='blue1' value='X' onclick="print('*')">x</button>
+            <button class="shape" value='4' onclick="print(4)" id="common4">4</button>
+            <button class="shape" value='5' onclick="print(5)" id="common5">5</button>
+            <button class="shape" value='6' onclick="print(6)" id="common6">6</button>
+            <button class="shape blue" id='blue2' value='-' onclick="print('-')">-</button>
+            <button class="shape" value='1' onclick="print(1)" id="common7">1</button>
+            <button class="shape" value='2' onclick="print(2)" id="common8">2</button>
+            <button class="shape" value='3' onclick="print(3)" id="common9">3</button>
+            <button class="shape blue" id='blue3' value='+' onclick="print('+')">+</button>
+            <button class="zero" value='0' onclick="print(0)" id="common10">0</button>
+            <button class="shape" value='.' onclick="print('.')" id="common11">.</button>
+            <button class="shape blue" id='blue4' value='=' onclick="calc()">=</button>
         </div>
     </div>
 </body>
